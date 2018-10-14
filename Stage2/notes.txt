@@ -1,0 +1,37 @@
+Complexity for all below is O(V . VlogV)
+
+ Node based topological similarity (local) == Topological Neighbourhood Based Methods (Local)
+
+Common Neighbor (CN)
+> Number of common neighbors between x,y
+
+Jacard Coefficient (JC)
+> Intersection/Union i.e Common Neighbors / Total Neighbors 
+> All values are fractions < 1
+
+Adamic Adar (AA)
+> Sum(1/log(edges(Zi))) over all common neighbors Z
+> If "triangle closing" is a frequent mechanism by which edges form in a social network,
+	>  Within common nghs of x and y, A node with more neighbours is less likely to introduce x and y than a node with less neighbours.
+
+Resource Allocation(RA)
+> Sum(1/|edges(Zi)|) over all common neighbors Z
+> 
+
+Preferential Attachment (PA)
+> product of no of edges of u and v
+> this similarity index has the lowest computational complexity.
+
+ Path based topological similarity (global)
+
+Hitting time (HT)
+> Hx,y from x to y is the expected number of steps required for a random walk starting at x to reach y.
+
+Rooted pagerank (RP)
+> Random walks from x to y will be terminated/reset with fixed probabilty alpha at each step; in this way, distant parts of the graph will almost never be explored.
+> 
+
+
+AUC = P( p1.score > p2.score and p1 is existing and p2 is non-existing ) + 0.5*P( p1.score = p2.score and ..)
+	= count(score above + 0.5 score equal)/ len(non existing)
+above value is averaged over all node pairs
