@@ -1,0 +1,6 @@
+[submodule "Stage3/deepwalk"]
+	path = Stage3/deepwalk
+	url = https://github.com/phanein/deepwalk
+[submodule "Stage3/node2vec"]
+	path = Stage3/node2vec
+	url = https://github.com/aditya-grover/node2vec
